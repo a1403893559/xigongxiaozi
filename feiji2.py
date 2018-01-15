@@ -18,8 +18,13 @@ class GameSprite(pygame.sprite.Sprite):
 
 
 class Backgroup(GameSprite):
-	def update(self):
 
+#	def __init__(self):
+#		super().__init__(image_name)
+
+
+	def update(self):
+		super().update()
 		if self.rect.y >= SCREEN_RECT.height:
 			self.rect.y = -self.rect.height
 
@@ -117,7 +122,7 @@ class Bullet(GameSprite):
 
 class EnemyBullet(GameSprite):
 	def __init__(self):
-		super().__init__('/home/jiu/桌面/__pycache__/资源/images/bullet1.png',5)
+		super().__init__('/home/jiu/桌面/__pycache__/资源/images/bullet2.png',5)
 	def update(self):
 		super().update()
 		if self.rect.y >= 700:
